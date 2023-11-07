@@ -1,15 +1,25 @@
 import {Component} from '@angular/core';
 
+interface Producto {
+   id: number;
+   nombre: string;
+   precio: number;
+   descripcion: string;
+   Fecha_Expedicion: string;
+   Fecha_vencimiento: string;
+ }
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
+   
    title = 'angular-course';
 
-   productos = [
+   productos: Producto[] = [
       {id: 100, nombre: "arroz", precio: 1500, descripcion: 'AAA',  Fecha_Expedicion: '20-10-2023', Fecha_vencimiento: '2023-12-01'},
       {id: 101, nombre: "azucar", precio: 2000, descripcion: 'BBB',  Fecha_Expedicion: '20-10-2023', Fecha_vencimiento: '2023-12-08'},
       {id: 102, nombre: "cafe", precio: 2000, descripcion: 'CCC',  Fecha_Expedicion: '20-10-2023', Fecha_vencimiento: '2023-12-12'},
