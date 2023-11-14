@@ -23,15 +23,15 @@
 
       <tbody class="table-group-divider">
          <ng-container *ngFor="let p of productos; let i = index">
-           <tr *ngIf="p.nombre.includes(codigo); else listado">
-             <th scope="row" class="mark">{{i}}</th>
-             <td class="codigo">{{p.id}}</td>
-             <td class="nombre">{{p.nombre}}</td>
-             <td class="precio">{{p.precio}}</td>
-             <td class="descripcion">{{p.descripcion}}</td>
-             <td class="expedición">{{p.Fecha_Expedicion}}</td>
-             <td class="vencimiento">{{p.Fecha_vencimiento}}</td>
-           </tr>
+            <tr *ngIf="p.nombre.includes(codigo); else listado">
+               <th scope="row" class="mark">{{i}}</th>
+               <td class="codigo">{{p.id}}</td>
+               <td class="nombre">{{p.nombre}}</td>
+               <td class="precio">{{p.precio}}</td>
+               <td class="descripcion">{{p.descripcion}}</td>
+               <td class="expedición">{{p.Fecha_Expedicion}}</td>
+               <td class="vencimiento">{{p.Fecha_vencimiento}}</td>
+            </tr>
          </ng-container>
 
          <ng-template #listado></ng-template>
